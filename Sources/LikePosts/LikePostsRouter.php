@@ -88,7 +88,7 @@ function routeLikePostsAdmin() {
 
 	//wakey wakey, call the func you lazy
 	if (isset($_REQUEST['sa']) && isset($subActions[$_REQUEST['sa']]) && method_exists(LikePosts::$LikePostsAdmin, $subActions[$_REQUEST['sa']]))
-		return LikePosts::$LikePostsAdmin->$subActions[$_REQUEST['sa']]();
+		return LikePosts::$LikePostsAdmin->{$subActions[$_REQUEST['sa']]}();
 
 	// At this point we can just do our default.
 	LikePosts::$LikePostsAdmin->$defaultActionFunc();
@@ -125,7 +125,7 @@ function routeLikePostsProfile($memID) {
 	);
 
 	if (isset($_REQUEST['sa']) && isset($subActions[$_REQUEST['sa']]) && method_exists(LikePosts::$LikePostsProfile, $subActions[$_REQUEST['sa']]))
-		return LikePosts::$LikePostsProfile->$subActions[$_REQUEST['sa']]($memID);
+		return LikePosts::$LikePostsProfile->{$subActions[$_REQUEST['sa']]}($memID);
 
 	// At this point we can just do our default.
 	LikePosts::$LikePostsProfile->$defaultActionFunc($memID);
@@ -142,7 +142,7 @@ class LikePostsRouter {
 		);
 
 		if (isset($_REQUEST['sa']) && isset($subActions[$_REQUEST['sa']]) && method_exists(LikePosts::$LikeUnlikePosts, $subActions[$_REQUEST['sa']]))
-			return LikePosts::$LikeUnlikePosts->$subActions[$_REQUEST['sa']]();
+			return LikePosts::$LikeUnlikePosts->{$subActions[$_REQUEST['sa']]}();
 	}
 
 	public static function routeLikesData() {
@@ -154,7 +154,7 @@ class LikePostsRouter {
 		);
 
 		if (isset($_REQUEST['sa']) && isset($subActions[$_REQUEST['sa']]) && method_exists(LikePosts::$LikePostsData, $subActions[$_REQUEST['sa']]))
-			return LikePosts::$LikePostsData->$subActions[$_REQUEST['sa']]();
+			return LikePosts::$LikePostsData->{$subActions[$_REQUEST['sa']]}();
 	}
 
 	public static function routeLikeStats() {
@@ -195,7 +195,7 @@ class LikePostsRouter {
 		$context['sub_template'] = 'lp_stats';
 
 		if (isset($_REQUEST['sa']) && isset($subActions[$_REQUEST['sa']]) && method_exists(LikePosts::$LikePostsData, $subActions[$_REQUEST['sa']]))
-			return LikePosts::$LikePostsData->$subActions[$_REQUEST['sa']]();
+			return LikePosts::$LikePostsData->{$subActions[$_REQUEST['sa']]}();
 	}
 
 	public static function routeLikeStatsAjax() {
@@ -218,7 +218,7 @@ class LikePostsRouter {
 
 			//wakey wakey, call the func you lazy
 			if (isset($_REQUEST['sa']) && isset($subActions[$_REQUEST['sa']]) && method_exists(LikePosts::$LikePostsStats, $subActions[$_REQUEST['sa']]))
-				return LikePosts::$LikePostsStats->$subActions[$_REQUEST['sa']]();
+				return LikePosts::$LikePostsStats->{$subActions[$_REQUEST['sa']]}();
 
 			// At this point we can just do our default.
 			LikePosts::$LikePostsStats->$defaultActionFunc();
