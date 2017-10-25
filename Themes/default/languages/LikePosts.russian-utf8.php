@@ -34,14 +34,14 @@
 global $txt;
 
 //front end strings strings
-$txt['lp_string_you_liked'] = 'You liked this';
-$txt['lp_string_you'] = 'You &amp;';
-$txt['lp_string_other_people_liked'] = '%1$d other person liked this';
-$txt['lp_string_other_multiple_people_liked'] = '%1$d other people liked this';
-$txt['lp_string_people_liked'] = '%1$d person liked this';
-$txt['lp_string_multiple_people_liked'] = '%1$d people liked this';
+$txt['lp_string_you_liked'] = 'Вы лайкнули это';
+$txt['lp_string_you'] = 'Вы &amp;';
+$txt['lp_string_other_people_liked'] = '%1$d другой человек лайкнул это';
+$txt['lp_string_other_multiple_people_liked'] = '%1$d других человек лайкнули это';
+$txt['lp_string_people_liked'] = '%1$d человек лайкнул это';
+$txt['lp_string_multiple_people_liked'] = '%1$d человек лайкнули это';
 
-$txt['lp_like'] = 'Like';
+$txt['lp_like'] = 'Лайк';
 $txt['lp_unlike'] = 'Unlike';
 $txt['lp_total_likes'] = 'Лайков';
 $txt['like_show_notifications'] = 'Уведомления о новых лайках';
@@ -160,5 +160,3 @@ $txt['lp_error_no_data'] = 'Извините, пока нет ничего к п
 $txt['lp_all_notification'] = 'Все уведомления';
 $txt['lp_my_posts'] = 'К моим темам';
 $txt['lp_no_notification'] = 'Нет на текущий момент';
-
-?>
